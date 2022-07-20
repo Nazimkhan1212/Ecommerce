@@ -1,0 +1,21 @@
+import { Heading, Grid } from '@chakra-ui/react';
+import Product from '../components/Product';
+import products from '../products';
+
+const HomeScreen = () => {
+  return (
+    <div>
+      <Heading as='h2' mb='8' fontSize='3xl'>
+        Latest Products
+      </Heading>
+
+      <Grid templateColumns='1fr 1fr 1fr 1fr' gap='8'>
+        {products.map((prod) => (
+          <Product product={prod} />
+        ))}
+      </Grid>
+    </div>
+  );
+};
+
+export default HomeScreen;
